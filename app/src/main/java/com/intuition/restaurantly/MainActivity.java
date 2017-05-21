@@ -25,6 +25,12 @@ public class MainActivity extends AppCompatActivity {
 
         mLocationEditText = (EditText) findViewById(R.id.locationEditText);
         mFindRestaurantsButton = (Button) findViewById(R.id.find_button);
+        mTitleTextView = (TextView) findViewById(R.id.title_textview);
+
+        Typeface pacifico = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");
+
+        mTitleTextView.setTypeface(pacifico);
+
         mFindRestaurantsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
