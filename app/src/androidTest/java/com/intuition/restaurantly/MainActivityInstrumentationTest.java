@@ -29,7 +29,7 @@ public class MainActivityInstrumentationTest {
         String location = "Portland";
         onView(withId(R.id.locationEditText)).perform(typeText(location));
         onView(withId(R.id.find_button)).perform(click());
-        onView(withId(R.id.userInputDisplay)).check(matches
+        onView(withId(R.id.locationDisplay)).check(matches
                 (withText("Here are all the restaurants in " + location)));
     }
 }

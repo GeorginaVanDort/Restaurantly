@@ -14,7 +14,7 @@ public class RestaurantsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurants);
 
-        mLocationTextView = (TextView) findViewById(R.id.locationEditText);
+        mLocationTextView = (TextView) findViewById(R.id.locationDisplay);
 
         Intent intent = getIntent();
         String location = intent.getStringExtra("location");
