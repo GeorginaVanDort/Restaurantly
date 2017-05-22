@@ -10,22 +10,22 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
-    private Button mFindRestaurantsButton;
-    private EditText mLocationEditText;
-    private TextView mTitleTextView;
+    @BindView(R.id.find_button) Button mFindRestaurantsButton;
+    @BindView(R.id.locationEditText) TextView mLocationEditText;
+    @BindView(R.id.title_textview) TextView mTitleTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mLocationEditText = (EditText) findViewById(R.id.locationEditText);
-        mFindRestaurantsButton = (Button) findViewById(R.id.find_button);
-        mTitleTextView = (TextView) findViewById(R.id.title_textview);
+        ButterKnife.bind(this);
 
         Typeface pacifico = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");
 

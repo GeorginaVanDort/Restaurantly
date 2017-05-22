@@ -1,6 +1,9 @@
-package com.intuition.restaurantly;
+package com.intuition;
 
 import android.support.test.rule.ActivityTestRule;
+
+import com.intuition.restaurantly.MainActivity;
+import com.intuition.restaurantly.R;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -30,6 +33,7 @@ public class MainActivityInstrumentationTest {
         onView(withId(R.id.locationEditText)).perform(typeText(location));
         onView(withId(R.id.find_button)).perform(click());
         onView(withId(R.id.locationDisplay)).check(matches
-                (withText("Here are all the restaurants in " + location)));
+                (withText("Here are all the restaurants near: " + location)));
     }
+
 }

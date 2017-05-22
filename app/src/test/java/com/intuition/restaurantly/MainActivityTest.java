@@ -26,9 +26,9 @@ public class MainActivityTest {
     }
 
     @Test
-    public void validate (){
-        TextView textView = (TextView) activity.findViewById(R.id.title_textview);
-        assertTrue("MY RESTAURANT".equals(textView.getText().toString()));
+    public void validateTextViewContent() {
+        TextView appNameTextView = (TextView) activity.findViewById(R.id.title_textview);
+        assertTrue("MyRestaurants".equals(appNameTextView.getText().toString()));
     }
 
     @Test

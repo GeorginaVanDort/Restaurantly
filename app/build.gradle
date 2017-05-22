@@ -12,6 +12,12 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         useLibrary 'org.apache.http.legacy'
     }
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
     buildTypes {
         release {
             minifyEnabled false
